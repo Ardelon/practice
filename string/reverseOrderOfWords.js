@@ -17,6 +17,9 @@ const reverseOrderOfWordsOne = (str) => {
   console.log(reversedStr);
 };
 
+console.time("starting");
+console.log("Start Functions");
+console.timeEnd("starting");
 console.time("reverseOrderOfWords");
 reverseOrderOfWordsOne(lorem1);
 reverseOrderOfWordsOne(medium1);

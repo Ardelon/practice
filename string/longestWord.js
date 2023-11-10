@@ -67,7 +67,9 @@ const longestWordTwo = (str) => {
   }
   console.log(longest, longest.length);
 };
-
+console.time("starting");
+console.log("Start Functions");
+console.timeEnd("starting");
 console.time("longestWordOne");
 longestWordOne(lorem1);
 longestWordOne(medium1);

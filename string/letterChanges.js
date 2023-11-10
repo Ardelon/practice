@@ -18,6 +18,9 @@ const letterChangesTwo = (str, previousLetter, newLetter) => {
   //   console.log(newStr);
 };
 
+console.time("starting");
+console.log("Start Functions");
+console.timeEnd("starting");
 console.time("letterChangesOne");
 letterChangesOne(lorem1, "a", "e");
 letterChangesOne(medium1, "o", "u");

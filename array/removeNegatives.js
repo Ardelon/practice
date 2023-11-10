@@ -15,6 +15,9 @@ const removeNegativesTwo = (arr) => {
   console.log(newArr);
 };
 
+console.time("starting");
+console.log("Start Functions");
+console.timeEnd("starting");
 console.time("removeNegativesOne");
 removeNegativesOne(generateNumbersOne());
 console.timeEnd("removeNegativesOne");

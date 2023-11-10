@@ -1,5 +1,7 @@
 const { generateNumbersOne } = require("./generateNumbers");
 
+const numbers = generateNumbersOne();
+
 const sortNumbersOne = (arr) => {
   const sortedArr = [];
 
@@ -43,29 +45,33 @@ const sortNumbersThree = (arr) => {
 const sortNumbersFour = (arr) => {
   console.log(
     arr.sort(function (a, b) {
-      return b - a;
+      return a - b;
     })
   );
 };
 
+console.time("starting");
+console.log("Start Functions");
+console.timeEnd("starting");
+
 console.time("sortNumbersOne");
-sortNumbersOne(generateNumbersOne());
+sortNumbersOne(numbers);
 console.timeEnd("sortNumbersOne");
 
 console.log(" ");
 
 console.time("sortNumbersTwo");
-sortNumbersTwo(generateNumbersOne());
+sortNumbersTwo(numbers);
 console.timeEnd("sortNumbersTwo");
 
 console.log(" ");
 
 console.time("sortNumbersThree");
-sortNumbersThree(generateNumbersOne());
+sortNumbersThree(numbers);
 console.timeEnd("sortNumbersThree");
 
 console.log(" ");
 
 console.time("sortNumbersFour");
-sortNumbersFour(generateNumbersOne());
+sortNumbersFour(numbers);
 console.timeEnd("sortNumbersFour");

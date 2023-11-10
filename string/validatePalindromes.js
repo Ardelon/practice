@@ -58,6 +58,9 @@ const validatePalindromeThree = (str) => {
   console.log(str, isPalindrome);
 };
 
+console.time("starting");
+console.log("Start Functions");
+console.timeEnd("starting");
 console.time("validatePalindromeOne");
 for (let one = 0; one < palindromes.length; one++) {
   validatePalindromeOne(palindromes[one]);
