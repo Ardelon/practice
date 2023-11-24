@@ -58,6 +58,28 @@ const validatePalindromeThree = (str) => {
   console.log(str, isPalindrome);
 };
 
+const validatePalindromeFour = (str) => {
+  let isPalindrome = true;
+  if (str.length === 1) {
+    console.log(str, isPalindrome);
+    return isPalindrome;
+  }
+
+  const purgedChar = str
+    .toLowerCase()
+    .split("")
+    .filter((a) => alphabet.includes(a));
+
+  for (let index = 0; index < Math.round(purgedChar.length / 2); index++) {
+    if (purgedChar[index] !== purgedChar[purgedChar.length - index - 1]) {
+      isPalindrome = false;
+      console.log(str, isPalindrome);
+      return isPalindrome;
+    }
+  }
+  console.log(str, isPalindrome);
+};
+
 console.time("starting");
 console.log("Start Functions");
 console.timeEnd("starting");
@@ -81,5 +103,12 @@ for (let one = 0; one < palindromes.length; one++) {
   validatePalindromeThree(palindromes[one]);
 }
 console.timeEnd("validatePalindromeThree");
+
+console.log(" ");
+console.time("validatePalindromeFour");
+for (let one = 0; one < palindromes.length; one++) {
+  validatePalindromeFour(palindromes[one]);
+}
+console.timeEnd("validatePalindromeFour");
 
 console.log(" ");
